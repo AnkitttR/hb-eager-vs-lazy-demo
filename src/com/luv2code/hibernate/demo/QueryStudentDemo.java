@@ -35,7 +35,13 @@ public class QueryStudentDemo {
 			for (Student tempStudent : theStudents) {
 				System.out.println(tempStudent);
 			}
-					
+			
+			//query students: lastName='Doe'
+			theStudents = session.createQuery("from Student s where s.lastName='Doe'").list();
+			
+			//display the students
+			
+			
 			//commit transaction
 			session.getTransaction().commit();
 			System.out.println("Done!");
