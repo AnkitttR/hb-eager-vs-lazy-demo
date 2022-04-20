@@ -1,5 +1,8 @@
 package com.luv2code.jdbc;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 public class TestJdbc {
 
 	public static void main(String[] args) {
