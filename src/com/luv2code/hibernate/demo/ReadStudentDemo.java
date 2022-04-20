@@ -32,10 +32,17 @@ public class ReadStudentDemo {
 			
 			//save the student object
 			System.out.println("Saving the student...");
+			System.out.println(tempStudent);
 			session.save(tempStudent);
 			
 			//commit transaction
 			session.getTransaction().commit();
+			
+			//My New Code
+			
+			
+			//find out the student's id: primary key
+			System.out.println("Saved student. Generated id: " + tempStudent.getId());
 			System.out.println("Done!");
 			
 		}
