@@ -1,10 +1,11 @@
 package com.luv2code.hibernate.demo;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.luv2code.hibernate.demo.entity.Student;
-import com.mysql.cj.Session;
+
 
 public class CreateStudentDemo {
 
@@ -18,6 +19,11 @@ public class CreateStudentDemo {
 				                        .buildSessionFactory();
 		
 		//create session
+		Session session = factory.getCurrentSession();
+		
+		try {
+			//use the session object to save Java object
+		}
 	}
 
 }
