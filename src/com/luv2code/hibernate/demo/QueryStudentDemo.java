@@ -38,6 +38,7 @@ public class QueryStudentDemo {
 			theStudents = session.createQuery("from Student s where s.lastName='Doe'").list();
 			
 			//display the students
+			System.out.println("\n\nStudents who have last name of Doe");
 			displayStudents(theStudents);
 			
 			//commit transaction
