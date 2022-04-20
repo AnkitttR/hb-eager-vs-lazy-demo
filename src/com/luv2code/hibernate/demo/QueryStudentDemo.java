@@ -1,5 +1,7 @@
 package com.luv2code.hibernate.demo;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -25,6 +27,11 @@ public class QueryStudentDemo {
 												
 			//start a transaction
 			session.beginTransaction();
+			
+			//query students
+			List<Student> theStudents = session.createQuery("from Student").list();
+			
+			//display the students
 					
 			//commit transaction
 			session.getTransaction().commit();
