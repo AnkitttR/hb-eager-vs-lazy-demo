@@ -22,20 +22,14 @@ public class UpdateStudentDemo {
 		Session session = factory.getCurrentSession();
 		
 		try {
+			int studentId = 1;
 					
-			
-			//My New Code
-			
-			
-			//find out the student's id: primary key
-			System.out.println("Saved student. Generated id: " + tempStudent.getId());
-			
 			//now get a new session and start transaction
 			session = factory.getCurrentSession();
 			session.beginTransaction();
 			
 			//retrieve student based on the id: primary key
-			System.out.println("\nGetting student with id: " + tempStudent.getId());
+			System.out.println("\nGetting student with id: " + studentId);
 			
 			Student myStudent = session.get(Student.class, tempStudent.getId());
 			
