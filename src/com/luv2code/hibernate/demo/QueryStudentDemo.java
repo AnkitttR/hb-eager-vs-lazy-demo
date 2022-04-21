@@ -52,6 +52,8 @@ public class QueryStudentDemo {
 			//query students where email LIKE '%luv2code.com'
 			theStudents = session.createQuery("from Student s where" 
 			                                      + " s.email LIKE '%luv2code.com'").list();
+			//display the students
+			displayStudents(theStudents);
 			
 			
 			//commit transaction
