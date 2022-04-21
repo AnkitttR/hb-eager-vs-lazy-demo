@@ -45,7 +45,9 @@ public class QueryStudentDemo {
 			theStudents = session.createQuery("from Student s where"
 			                                    + " s.lastName='Doe' OR s.firstName='Daffy'").list();
 			
-			
+			//display the students
+			System.out.println("\n\nStudents who have last name of Doe OR first name Daffy");
+			displayStudents(theStudents);
 			
 			
 			
