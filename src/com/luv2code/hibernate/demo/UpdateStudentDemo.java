@@ -39,6 +39,13 @@ public class UpdateStudentDemo {
 			//commit the transaction
 			session.getTransaction().commit();
 			
+			//NEW CODE
+			
+			session = factory.getCurrentSession();
+			session.beginTransaction();
+			
+			//commit the transaction
+			session.getTransaction().commit();
 		
 			System.out.println("Done!");
 			
