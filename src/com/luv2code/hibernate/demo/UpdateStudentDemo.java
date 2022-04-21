@@ -32,7 +32,11 @@ public class UpdateStudentDemo {
 			System.out.println("\nGetting student with id: " + studentId);
 			
 			Student myStudent = session.get(Student.class, studentId);
-						
+			
+			//delete the student
+			System.out.println("Deleting student: " + myStudent);
+			session.delete(myStudent);
+			
 			//commit the transaction
 			session.getTransaction().commit();
 			
