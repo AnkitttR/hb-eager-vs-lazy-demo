@@ -22,21 +22,7 @@ public class UpdateStudentDemo {
 		Session session = factory.getCurrentSession();
 		
 		try {
-			
-			//create a student object
-			System.out.println("Creating new student object...");
-			Student tempStudent = new Student("Daffy","Duck","daffy@luv2code.com");
-						
-			//start a transaction
-			session.beginTransaction();
-			
-			//save the student object
-			System.out.println("Saving the student...");
-			System.out.println(tempStudent);
-			session.save(tempStudent);
-			
-			//commit transaction
-			session.getTransaction().commit();
+					
 			
 			//My New Code
 			
