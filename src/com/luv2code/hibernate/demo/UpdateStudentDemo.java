@@ -31,9 +31,10 @@ public class UpdateStudentDemo {
 			//retrieve student based on the id: primary key
 			System.out.println("\nGetting student with id: " + studentId);
 			
-			Student myStudent = session.get(Student.class, tempStudent.getId());
+			Student myStudent = session.get(Student.class, studentId);
 			
-			System.out.println("Get complete: " + myStudent);
+			System.out.println("Updating student... ");
+			myStudent.setFirstName("Scooby");
 			
 			//commit the transaction
 			session.getTransaction().commit();
