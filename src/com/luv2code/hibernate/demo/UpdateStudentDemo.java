@@ -34,8 +34,8 @@ public class UpdateStudentDemo {
 			Student myStudent = session.get(Student.class, studentId);
 			
 			//delete the student
-			System.out.println("Deleting student: " + myStudent);
-			session.delete(myStudent);
+			//System.out.println("Deleting student: " + myStudent);
+			//session.delete(myStudent);
 			
 			//delete student id=2
 			System.out.println("Deleting student id=2");
