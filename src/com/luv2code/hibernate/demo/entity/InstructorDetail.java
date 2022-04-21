@@ -23,4 +23,10 @@ public class InstructorDetail {
 	
 	
 	//generate toString() method
+	
+	private int id;
+	
+	private String youtubeChannel;
+	
+	private String hobby;
 }
