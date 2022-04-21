@@ -42,7 +42,8 @@ public class QueryStudentDemo {
 			displayStudents(theStudents);
 			
 			//query students: lastName='Doe' OR firstName='Daffy'
-			
+			theStudents = session.createQuery("from Student s where"
+			                                    + " s.lastName='Doe' OR s.firstName='Daffy'").list();
 			
 			
 			
