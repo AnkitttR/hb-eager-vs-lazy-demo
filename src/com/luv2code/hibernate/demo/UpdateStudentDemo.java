@@ -48,6 +48,7 @@ public class UpdateStudentDemo {
 			System.out.println("Update email for all students");
 			
 			session.createQuery("update Student set email='foo@gmail.com'")
+			   .executeUpdate();
 			
 			//commit the transaction
 			session.getTransaction().commit();
