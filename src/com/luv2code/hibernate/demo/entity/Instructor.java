@@ -1,5 +1,10 @@
 package com.luv2code.hibernate.demo.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="instructor")
 public class Instructor {
 
 	//annotate the class as an entity and map to db table
@@ -19,8 +24,12 @@ public class Instructor {
 		
 		//generate toString() method
 	
+		private int id;
+		
+		private String firstName;
 	
-	
-	
+		private String lastName;
+		
+		private String email;
 	
 }
