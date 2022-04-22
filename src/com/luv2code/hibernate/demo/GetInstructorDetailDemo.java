@@ -22,7 +22,7 @@ public class GetInstructorDetailDemo {
 				                        .buildSessionFactory();
 		
 		//create session
-		Session session = factory.getCurrentSession();
+		Session session = factory.getCurrentSession(); //factory ke under hai CurrentSession
 		
 		try {
 				
@@ -31,12 +31,15 @@ public class GetInstructorDetailDemo {
 			session.beginTransaction();
 						
 			//get the instructor detail object
-			
+			int theId = 2;
+			InstructorDetail tempInstructorDetail = session.get(InstructorDetail.class, theId);
 			
 			//print the instructor detail
-			
+			System.out.println("tempInstructorDetails: " + tempInstructorDetail);
 			
 			//print the associated instructor
+			System.out.println("the associated instructor: " + 
+														tempInstructorDetail.getInstructor()) ;
 			
 			
 			//commit transaction
