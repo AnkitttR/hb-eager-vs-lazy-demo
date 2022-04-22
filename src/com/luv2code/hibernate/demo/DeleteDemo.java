@@ -30,6 +30,10 @@ public class DeleteDemo {
 			//start a transaction
 			session.beginTransaction();
 						
+			//get instructor by primary key/id
+			
+			//delete the instructors
+			
 			
 			//commit transaction
 			session.getTransaction().commit();
