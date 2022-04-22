@@ -45,7 +45,8 @@ public class InstructorDetail {
 	
 	//add @OneToOne annotation
 	
-	@OneToOne(mappedBy="instructorDetail", cascade=CascadeType.ALL) //mappedBy refers to instructorDetail property in instructor class
+	@OneToOne(mappedBy="instructorDetail", cascade= {CascadeType.DETACH, CascadeType.MERGE, 
+			CascadeType.PERSIST, CascadeType.REFRESH}) //mappedBy refers to instructorDetail property in instructor class
 	private Instructor instructor;
 	
 	
