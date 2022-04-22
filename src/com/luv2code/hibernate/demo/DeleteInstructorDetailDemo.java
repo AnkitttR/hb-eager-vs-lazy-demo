@@ -42,7 +42,7 @@ public class DeleteInstructorDetailDemo {
 														tempInstructorDetail.getInstructor()) ;
 			
 			// now let's delete the instructor detail
-			System.out.println("Deleting tempInstructorDetail: ");
+			System.out.println("Deleting tempInstructorDetail: " + tempInstructorDetail);
 			session.delete(tempInstructorDetail);
 			
 			
