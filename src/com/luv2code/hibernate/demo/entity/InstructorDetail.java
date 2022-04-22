@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -40,8 +41,11 @@ public class InstructorDetail {
 	private String hobby;
 	
 	// add new field for instructor (also add getter/setter methods)
-	private Instructor instructor;
 	
+	//add @OneToOne annotation
+	
+	@OneToOne(mappedBy="instructorDetail") //mappedBy refers to instructorDetail property in instructor class
+	private Instructor instructor;
 	
 	
 	public Instructor getInstructor() {
