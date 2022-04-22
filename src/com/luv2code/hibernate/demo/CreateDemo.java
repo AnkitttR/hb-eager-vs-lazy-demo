@@ -25,10 +25,17 @@ public class CreateDemo {
 		Session session = factory.getCurrentSession();
 		
 		try {
-											
+				
+			//create the objects
+			
+			//associate the objects
+			
+			
 			//start a transaction
 			session.beginTransaction();
 						
+			//save the instructor
+			
 			//commit transaction
 			session.getTransaction().commit();
 			System.out.println("Done!");
