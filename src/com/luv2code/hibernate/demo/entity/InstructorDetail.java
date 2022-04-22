@@ -1,5 +1,6 @@
 package com.luv2code.hibernate.demo.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -44,7 +45,7 @@ public class InstructorDetail {
 	
 	//add @OneToOne annotation
 	
-	@OneToOne(mappedBy="instructorDetail") //mappedBy refers to instructorDetail property in instructor class
+	@OneToOne(mappedBy="instructorDetail", cascade=CascadeType.ALL) //mappedBy refers to instructorDetail property in instructor class
 	private Instructor instructor;
 	
 	
