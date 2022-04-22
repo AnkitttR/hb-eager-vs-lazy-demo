@@ -43,11 +43,13 @@ public class InstructorDetail {
 		
 	}
 
+	//Constructor
 	public InstructorDetail(String youtubeChannel, String hobby) {
 		this.youtubeChannel = youtubeChannel;
 		this.hobby = hobby;
 	}
 
+	//Getter & Setter Methods
 	public int getId() {
 		return id;
 	}
@@ -71,6 +73,8 @@ public class InstructorDetail {
 	public void setHobby(String hobby) {
 		this.hobby = hobby;
 	}
+	
+	//toString() method
 
 	@Override
 	public String toString() {
