@@ -30,7 +30,13 @@ public class GetInstructorDetailDemo {
 			//start a transaction
 			session.beginTransaction();
 						
+			//get the instructor detail object
 			
+			
+			//print the instructor detail
+			
+			
+			//print the associated instructor
 			
 			
 			//commit transaction
