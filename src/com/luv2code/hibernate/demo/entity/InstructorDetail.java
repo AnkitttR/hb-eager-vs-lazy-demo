@@ -40,8 +40,18 @@ public class InstructorDetail {
 	private String hobby;
 	
 	// add new field for instructor (also add getter/setter methods)
+	private Instructor instructor;
 	
 	
+	
+	public Instructor getInstructor() {
+		return instructor;
+	}
+
+	public void setInstructor(Instructor instructor) {
+		this.instructor = instructor;
+	}
+
 	public InstructorDetail() {
 		
 	}
