@@ -40,6 +40,12 @@ public class CreateDemo {
 			session.beginTransaction();
 						
 			//save the instructor
+			//
+			//Note: this will ALSO save the details(Associated) object
+			//because of CascadeType.ALL
+			//
+			
+			session.save(tempInstructor);
 			
 			//commit transaction
 			session.getTransaction().commit();
