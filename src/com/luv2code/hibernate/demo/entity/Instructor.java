@@ -1,6 +1,9 @@
 package com.luv2code.hibernate.demo.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -24,6 +27,9 @@ public class Instructor {
 		
 		//generate toString() method
 	
+		@Id
+		@GeneratedValue(strategy=GenerationType.IDENTITY)
+		@Column(name="id")
 		private int id;
 		
 		private String firstName;
