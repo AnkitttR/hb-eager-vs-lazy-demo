@@ -31,7 +31,7 @@ public class Instructor {
 		
 		//generate toString() method
 	
-		@Id
+		@Id   //Primary Key
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
 		@Column(name="id")
 		private int id;
