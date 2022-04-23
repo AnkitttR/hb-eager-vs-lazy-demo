@@ -31,7 +31,7 @@ public class DeleteInstructorDetailDemo {
 			session.beginTransaction();
 						
 			//get the instructor detail object
-			int theId = 2;
+			int theId = 3;
 			InstructorDetail tempInstructorDetail = session.get(InstructorDetail.class, theId);
 			
 			//print the instructor detail
@@ -44,13 +44,16 @@ public class DeleteInstructorDetailDemo {
 			// now let's delete the instructor detail
 			System.out.println("Deleting tempInstructorDetail: " + tempInstructorDetail);
 			
-			//remove the associated object reference
+			//remove the associated object reference to
 			//break bi-directional link
 			
-			tempInstructorDetail.getInstructor().setInstructorDetail(null);
+			tempInstructorDetail.getInstructor().setInstructorDetail(null); //InstructorDetail jodne wali kadi hai
+														// Usi ko null kar diya, matlab Instructor & InstructorDetail 
+														// ka link tod diya
 			
 			
-			session.delete(tempInstructorDetail);
+			session.delete(tempInstructorDetail); //Ab safely InstructorDetail ko delete kar sakte hain
+								//Iska koi effect Instructor pe nahi pada
 			
 			
 			//commit transaction
