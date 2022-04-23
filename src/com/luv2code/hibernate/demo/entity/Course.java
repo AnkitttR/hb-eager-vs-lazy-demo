@@ -16,4 +16,10 @@ public class Course {
 	//define toString
 	
 	//annotate fields 
+	
+	private int id;
+	
+	private String title;
+	
+	private Instructor instructor;
 }
