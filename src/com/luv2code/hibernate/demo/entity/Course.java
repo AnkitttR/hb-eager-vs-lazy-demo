@@ -1,5 +1,7 @@
 package com.luv2code.hibernate.demo.entity;
 
+import java.security.PublicKey;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -22,4 +24,12 @@ public class Course {
 	private String title;
 	
 	private Instructor instructor;
+	
+	public Course() {  //No argument constructor
+			
+	}
+
+	public Course(String title) {
+		this.title = title;
+	}
 }
