@@ -1,5 +1,6 @@
 package com.luv2code.hibernate.demo.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,7 +32,8 @@ public class Course {
 	@Column(name="title")
 	private String title;
 	
-	@ManyToOne    //Many courses to one instructor
+	@ManyToOne(cascade= {CascadeType.PERSIST, CascadeType.MERGE, 
+			CascadeType.DETACH, CascadeType.REFRESH})    //Many courses to one instructor
 	@JoinColumn(name="instructor_id")  //Course ka column hai instructor_id, jo point kar raha hai, towards primary key of instructor.
 	private Instructor instructor;  //Reference to Instructor class
 	
