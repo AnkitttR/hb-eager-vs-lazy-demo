@@ -32,7 +32,7 @@ public class Course {
 	private String title;
 	
 	@ManyToOne    //Many courses to one instructor
-	@JoinColumn(name="instructor_id")  //Course & Instructor are connected by instructor_id column of database.
+	@JoinColumn(name="instructor_id")  //Course ka column hai instructor_id, jo point kar raha hai, towards primary key of instructor.
 	private Instructor instructor;  //Reference to Instructor class
 	
 	public Course() {  //No argument constructor
