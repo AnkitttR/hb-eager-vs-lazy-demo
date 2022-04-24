@@ -36,6 +36,8 @@ public class DeleteCourseDemo {
 			session.beginTransaction();
 						
 			//get a course
+			int theId = 10;
+			Course tempCourse = session.get(Course.class, theId);
 			
 			//delete course
 			
