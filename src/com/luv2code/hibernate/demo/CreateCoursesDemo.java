@@ -36,8 +36,11 @@ public class CreateCoursesDemo {
 			session.beginTransaction();
 						
 			//get the instructor from db
+			int theId = 1;
+			Instructor tempInstructor = session.get(Instructor.class, theId);
 			
 			//create some courses
+			Course tempCourse1 = new Course("Air Guitar")
 			
 			//add courses to instructor
 			
