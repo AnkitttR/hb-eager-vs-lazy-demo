@@ -57,7 +57,7 @@ public class Instructor {
 				CascadeType.DETACH, CascadeType.REFRESH}) //Refers to instructor property in course class
 		private List<Course> courses;
 		
-		
+		//List is interface, implemented by ArrayList class
 		
 		public Instructor() { //No Argument constructor
 			
@@ -125,11 +125,11 @@ public class Instructor {
 		
 		// add convenience methods for bi-directional relationship
 		
-		public void add(Course tempCourse) {
+		public void add(Course tempCourse) { //add method hai, Course class hai, tempCourse object hai Course class ka
 			if (courses == null) {
 				courses = new ArrayList<>();
 			}
-			courses.add(tempCourse);
+			courses.add(tempCourse); //courses mein jo value hai wo tempCourse mein add ho jayegi
 			
 			tempCourse.setInstructor(this);
 		}
