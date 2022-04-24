@@ -59,13 +59,22 @@ public class FetchJoinDemo {
 			// Path: tempInstructor (obj of Instructor) >> getCourses() method in instructor
 			//commit transaction
 			session.getTransaction().commit();
+			
+			//add clean up code
+			session.close();
+			
+			System.out.println("\nluv2code: The session is now closed!\n");
+			
+			//HQL is used hence courses can be executed even when session is closed
+			System.out.println("luv2code: Courses: " + tempInstructor.getCourses());
+			
+			
 			System.out.println("luv2code: Done!");
+			
 			
 		}
 		finally {
 			
-			//add clean up code
-			session.close();
 			
 			factory.close();
 		}
