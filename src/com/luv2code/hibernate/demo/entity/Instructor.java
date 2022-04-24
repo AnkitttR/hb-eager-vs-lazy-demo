@@ -54,7 +54,7 @@ public class Instructor {
 		@JoinColumn(name="instructor_detail_id") //instructor_detail_id column of instructor class is pointing towards primary key of instructor detail.
 		private InstructorDetail instructorDetail;
 		
-		@OneToMany(fetch=FetchType.EAGER,
+		@OneToMany(fetch=FetchType.LAZY,
 				
 				mappedBy="instructor", cascade= {CascadeType.PERSIST, CascadeType.MERGE, 
 				CascadeType.DETACH, CascadeType.REFRESH}) //Refers to instructor property in course class
