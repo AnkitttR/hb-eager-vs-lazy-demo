@@ -58,6 +58,10 @@ public class CreateInstructorDemo {
 			
 		}
 		finally {
+			
+			//add clean up code
+			session.close();
+			
 			factory.close();
 		}
 	}
