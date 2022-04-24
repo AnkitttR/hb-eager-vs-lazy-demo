@@ -30,28 +30,7 @@ public class CreateCoursesDemo {
 		
 		try {
 				
-			//create the objects
 			
-			//Instructor class mein value insert karenge
-			Instructor tempInstructor = new Instructor("Susan","Public","susan.public@luv2code.com");
-			
-			//InstructorDetail class mein value insert karenge
-			InstructorDetail tempInstructorDetail = 
-					new InstructorDetail(
-							"http://www.youtube.com","Video Games");
-			
-			
-			//Debugging Code
-			System.out.println(tempInstructor);
-			System.out.println(tempInstructorDetail);
-			
-			
-			
-			//Hey tempInstructor please set InstructorDetail to whatever is mentioned in tempInstructorDetail & join both of them
-			//After joining Instructor & InstructorDetail store them in Instructor
-			
-			//associate the objects
-			tempInstructor.setInstructorDetail(tempInstructorDetail);
 			
 			//start a transaction
 			session.beginTransaction();
