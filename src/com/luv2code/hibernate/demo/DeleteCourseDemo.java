@@ -35,15 +35,9 @@ public class DeleteCourseDemo {
 			//start a transaction
 			session.beginTransaction();
 						
-			//get the instructor from db
-			int theId = 1;
-			Instructor tempInstructor = session.get(Instructor.class, theId);
+			//get a course
 			
-			//Debugging Code
-			System.out.println("Value of tempInstructor " + tempInstructor);
-			
-			//get courses for the instructor
-			System.out.println("Courses: " + tempInstructor.getCourses());
+			//delete course
 			
 			// Path: tempInstructor (obj of Instructor) >> getCourses() method in instructor
 			//commit transaction
