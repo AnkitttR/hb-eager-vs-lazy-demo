@@ -30,15 +30,21 @@ public class CreateInstructorDemo {
 				
 			//create the objects
 			
-			
+			//Instructor class mein value insert karenge
 			Instructor tempInstructor = new Instructor("Susan","Public","susan.public@luv2code.com");
 			
+			//InstructorDetail class mein value insert karenge
 			InstructorDetail tempInstructorDetail = 
 					new InstructorDetail(
 							"http://www.youtube.com","Video Games");
 			
 			
+			//Debugging Code
+			System.out.println(tempInstructor);
+			System.out.println(tempInstructorDetail);
+			
 			//associate the objects
+			
 			tempInstructor.setInstructorDetail(tempInstructorDetail);
 			
 			//start a transaction
@@ -50,7 +56,7 @@ public class CreateInstructorDemo {
 			//because of CascadeType.ALL
 			//
 			System.out.println("Saving instructor:" + tempInstructor);
-			session.save(tempInstructor);
+			session.save(tempInstructor); //
 			
 			//commit transaction
 			session.getTransaction().commit();
