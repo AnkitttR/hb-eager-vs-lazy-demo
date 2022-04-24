@@ -1,7 +1,5 @@
 package com.luv2code.hibernate.demo;
 
-import javax.transaction.HeuristicCommitException;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -9,7 +7,6 @@ import org.hibernate.cfg.Configuration;
 import com.luv2code.hibernate.demo.entity.Course;
 import com.luv2code.hibernate.demo.entity.Instructor;
 import com.luv2code.hibernate.demo.entity.InstructorDetail;
-import com.luv2code.hibernate.demo.entity.Student;
 
 
 public class CreateInstructorDemo {
@@ -27,6 +24,9 @@ public class CreateInstructorDemo {
 		
 		//create session
 		Session session = factory.getCurrentSession();
+		
+		//factory is object of "SessionFactory Interface"
+		//getCurrentSession() is method placed in "SessionFactory Interface"
 		
 		try {
 				
