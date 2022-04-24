@@ -34,16 +34,17 @@ public class FetchJoinDemo {
 			
 			//start a transaction
 			session.beginTransaction();
-						
+			
+			//option2: Hibernate query with HQL
+			
 			//get the instructor from db
 			int theId = 1;
-			Instructor tempInstructor = session.get(Instructor.class, theId);
+			
 			
 			//Debugging Code
 			System.out.println("luv2code: Instructor: " + tempInstructor);
 			
-			//get courses for the instructor
-			System.out.println("luv2code: Courses: " + tempInstructor.getCourses());
+			
 			
 			// Path: tempInstructor (obj of Instructor) >> getCourses() method in instructor
 			//commit transaction
