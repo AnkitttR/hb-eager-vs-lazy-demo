@@ -35,13 +35,13 @@ public class CreateCoursesDemo {
 			//start a transaction
 			session.beginTransaction();
 						
-			//save the instructor
-			//
-			//Note: this will ALSO save the details(Associated) object
-			//because of CascadeType.ALL
-			//
-			System.out.println("Saving instructor:" + tempInstructor);
-			session.save(tempInstructor); //
+			//get the instructor from db
+			
+			//create some courses
+			
+			//add courses to instructor
+			
+			//save the courses
 			
 			//commit transaction
 			session.getTransaction().commit();
