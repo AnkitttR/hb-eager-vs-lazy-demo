@@ -1,5 +1,7 @@
 package com.luv2code.hibernate.demo;
 
+import javax.transaction.HeuristicCommitException;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -43,8 +45,12 @@ public class CreateInstructorDemo {
 			System.out.println(tempInstructor);
 			System.out.println(tempInstructorDetail);
 			
-			//associate the objects
 			
+			
+			//Hey tempInstructor please set InstructorDetail to whatever is mentioned in tempInstructorDetail & join both of them
+			//After joining Instructor & InstructorDetail store them in Instructor
+			
+			//associate the objects
 			tempInstructor.setInstructorDetail(tempInstructorDetail);
 			
 			//start a transaction
