@@ -40,15 +40,15 @@ public class EagerLazyDemo {
 			Instructor tempInstructor = session.get(Instructor.class, theId);
 			
 			//Debugging Code
-			System.out.println("Value of tempInstructor " + tempInstructor);
+			System.out.println("luv2code: Instructor: " + tempInstructor);
 			
 			//get courses for the instructor
-			System.out.println("Courses: " + tempInstructor.getCourses());
+			System.out.println("luv2code: Courses: " + tempInstructor.getCourses());
 			
 			// Path: tempInstructor (obj of Instructor) >> getCourses() method in instructor
 			//commit transaction
 			session.getTransaction().commit();
-			System.out.println("Done!");
+			System.out.println("luv2code: Done!");
 			
 		}
 		finally {
