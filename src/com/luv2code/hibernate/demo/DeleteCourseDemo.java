@@ -40,6 +40,9 @@ public class DeleteCourseDemo {
 			Course tempCourse = session.get(Course.class, theId);
 			
 			//delete course
+			System.out.println("Deleting course: " + tempCourse);
+			
+			session.delete(tempCourse);
 			
 			// Path: tempInstructor (obj of Instructor) >> getCourses() method in instructor
 			//commit transaction
